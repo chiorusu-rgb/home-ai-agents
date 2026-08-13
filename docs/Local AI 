@@ -1,0 +1,1 @@
+- Architecture Decision: Split custom_tools.py into modular, domain-specific files (e.g., email_tools.py, energy_tools.py) to keep the repository scalable and clean.
