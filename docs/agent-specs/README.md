@@ -1,6 +1,7 @@
-# Agent specs
+﻿# Agent specifications
 
 Initial agent set:
+
 - Lead Agent
 - Manager Agent
 - Email Agent

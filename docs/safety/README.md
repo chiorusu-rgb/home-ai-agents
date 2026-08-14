@@ -1,6 +1,7 @@
-# Safety policy
+﻿# Safety policy
 
 ## Rules
+
 - Read-only by default
 - Human approval required for write actions
 - Dry-run before execution where possible
