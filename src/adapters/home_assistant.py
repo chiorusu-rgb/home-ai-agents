@@ -1,4 +1,4 @@
-﻿import os
+import os
 from typing import Any
 
 import requests
@@ -61,3 +61,13 @@ class HomeAssistantClient:
             attributes=item.get("attributes", {}),
             last_changed=item.get("last_changed"),
         )
+
+    def get_energy_state(self, entity_id: str = "sensor.home_energy_power") -> dict[str, Any]:
+        reading = self.get_state(entity_id)
+        return {
+            "entity_id": reading.entity_id,
+            "state": reading.state,
+            "friendly_name": reading.attributes.get("friendly_name", reading.entity_id),
+            "unit_of_measurement": reading.attributes.get("unit_of_measurement", ""),
+            "last_changed": reading.last_changed,
+        }
