@@ -14,7 +14,7 @@ class HomeAssistantClient:
         timeout: int = 30,
     ) -> None:
         self.base_url = (
-            base_url or os.getenv("HOME_ASSISTANT_URL", "http://127.0.0.1:8123")
+            base_url or os.getenv("HOME_ASSISTANT_URL", "http://192.168.8.251:8123")
         ).rstrip("/")
         self.token = token or os.getenv("HOME_ASSISTANT_TOKEN", "")
         self.timeout = timeout

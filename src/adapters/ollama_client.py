@@ -12,7 +12,7 @@ class OllamaClient:
         timeout: int = 120,
     ) -> None:
         self.base_url = (
-            base_url or os.getenv("OLLAMA_URL", "http://127.0.0.1:11434")
+            base_url or os.getenv("OLLAMA_URL", "http://192.168.8.26:11434")
         ).rstrip("/")
         self.model = model or os.getenv("OLLAMA_MODEL", "llama3.2")
         self.timeout = timeout
